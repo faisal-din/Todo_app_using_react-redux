@@ -1,20 +1,14 @@
-
-import './App.css'
-import AddTodo from './Components/AddTodo'
-import TodoList from './Components/TodoList'
+import './App.css';
+import TodoList from './Components/TodoList';
 
 function App() {
-
   return (
     <>
-    <h1 className="text-3xl font-bold underline">
-    My Todo List
-  </h1>
-  <AddTodo/>
-  <TodoList/>
+      <h1 className='text-3xl font-bold underline'>My Todo List</h1>
 
+      <TodoList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
