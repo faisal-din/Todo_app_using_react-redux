@@ -4,7 +4,7 @@ import {
   removeTodo,
   toggleComplete,
   editTodo,
-  saveTodoEdit,
+  saveEditedTodo,
   cancelTodoEdit,
 } from '../Features/Todo/todoSlice';
 import { useState } from 'react';
@@ -26,7 +26,7 @@ function TodoList() {
   const saveEditHandler = (e, todo) => {
     e.preventDefault();
     if (editInput.trim() !== '') {
-      dispatch(saveTodoEdit({ id: todo.id, text: editInput }));
+      dispatch(saveEditedTodo({ id: todo.id, text: editInput }));
     } else {
       dispatch(cancelTodoEdit({ id: todo.id }));
     }

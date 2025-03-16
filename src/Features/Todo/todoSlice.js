@@ -34,7 +34,7 @@ const todoSlice = createSlice({
         todo.isEditing = true;
       }
     },
-    saveTodoEdit(state, action) {
+    saveEditedTodo(state, action) {
       const todo = state.todoList.find((todo) => todo.id === action.payload.id);
       if (todo) {
         todo.text = action.payload.text;
@@ -50,7 +50,13 @@ const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, removeTodo, toggleComplete, editTodo, saveTodoEdit, cancelTodoEdit } =
-  todoSlice.actions;
+export const {
+  addTodo,
+  removeTodo,
+  toggleComplete,
+  editTodo,
+  saveEditedTodo,
+  cancelTodoEdit,
+} = todoSlice.actions;
 
 export default todoSlice.reducer;
